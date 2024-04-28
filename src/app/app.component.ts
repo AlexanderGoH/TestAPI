@@ -13,13 +13,13 @@ import { ApiService } from './services/api.service';
 })
 export class AppComponent {
   title = 'prograweb';
-  people = [];
+  productos = [];
 
   constructor(private api: ApiService){}
 
   ngOnInit(){
-    this.api.getAllCharacters().subscribe((characters: any) => {
-      this.people = characters.results;
+    this.api.getAllProducts().subscribe((products: any) => {
+      this.productos = products;
     });
   }
 }

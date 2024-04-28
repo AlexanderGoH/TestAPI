@@ -11,6 +11,6 @@ export class CardComponent {
 
   @Input()
 
-  persona?: any;
+  producto?: any;
 
 }
