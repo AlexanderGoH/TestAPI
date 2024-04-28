@@ -15,13 +15,10 @@ export class AppComponent {
   title = 'prograweb';
   people = [];
 
-  constructor(private api: ApiService){
-
-  }
+  constructor(private api: ApiService){}
 
   ngOnInit(){
     this.api.getAllCharacters().subscribe((characters: any) => {
-      console.log(characters);
       this.people = characters.results;
     });
   }
