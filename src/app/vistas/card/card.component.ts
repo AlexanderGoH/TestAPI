@@ -13,4 +13,8 @@ export class CardComponent {
 
   producto?: any;
 
+  editar(){
+    console.log("elpepe");
+  }
+
 }

@@ -6,3 +6,7 @@
 .card img {
     padding: 1rem;
 }
+
+.btn-outline-primary, .btn-outline-danger {
+    border-color: transparent;
+}

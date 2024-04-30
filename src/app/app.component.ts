@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { CardComponent } from './card/card.component';
+import { CardComponent } from './vistas/card/card.component';
 import { NgFor } from '@angular/common';
 import { ApiService } from './services/api.service';
 
