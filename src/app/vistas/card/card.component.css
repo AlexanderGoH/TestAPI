@@ -9,4 +9,9 @@
 
 .btn-outline-primary, .btn-outline-danger {
     border-color: transparent;
+    transition: all 0.5s;
+}
+
+.btn-outline-primary:hover, .btn-outline-danger:hover {
+
 }
