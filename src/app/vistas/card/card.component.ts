@@ -14,7 +14,7 @@ export class CardComponent {
   producto?: any;
 
   editar(){
-    console.log("elpepe");
+    console.log(this.producto);
   }
 
 }
