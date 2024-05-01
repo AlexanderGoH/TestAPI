@@ -1,5 +1,5 @@
 header {
-    background-color: black;
+    background-color: #331959;
     position: relative;
 }
 
@@ -7,7 +7,7 @@ header img {
     display: block;
     width: 100%;
     height: auto;
-    opacity: 0.5;
+    opacity: 0.3;
 }
 
 header h1 {
