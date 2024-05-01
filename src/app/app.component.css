@@ -1,0 +1,19 @@
+header {
+    position: relative;
+}
+
+header img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+header h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: thistle;
+    background-color: rgba(27, 27, 27, 0.5);
+    padding: 10px;
+}
