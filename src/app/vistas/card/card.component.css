@@ -19,6 +19,15 @@
     padding: 1rem;
 }
 
+.btn-outline-primary {
+    color: #8250CD;
+}
+
+.btn-outline-primary:hover{
+    background-color: #8250CD;
+    color: white;
+}
+
 .btn-outline-primary, .btn-outline-danger {
     border-color: transparent;
     transition: all 0.5s;
