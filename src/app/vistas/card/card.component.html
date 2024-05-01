@@ -1,13 +1,15 @@
-<div class="card">
-    <img src="{{producto.images}}" class="card-img-top" alt="...">
+<div class="card card-product-grid">
+    <img src="{{producto.images}}" class="card-img-top" alt="Imagen del producto" width="222px" height="222px">
     <div class="card-body">
         <h5 class="card-title">{{producto.title}}</h5>
         <p class="card-text">${{producto.price}}</p>
-        <button (click)="editar()" class="btn btn-outline-primary">
-            <i class="bi bi-pencil-square"></i>
-        </button>
-        <button class="btn btn-outline-danger">
-            <i class="bi bi-trash"></i>
-        </button>
+        <div class="text-end">
+            <button (click)="editar()" class="btn btn-outline-primary">
+                <i class="bi bi-pencil-square"></i>
+            </button>
+            <button class="btn btn-outline-danger">
+                <i class="bi bi-trash"></i>
+            </button>
+        </div>
     </div>
 </div>

@@ -1,17 +1,32 @@
 .card {
+    height: 26rem;
     width: 16rem;
+    position: relative;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 0.10rem;
+    margin-top: 50px;
+    cursor: pointer;
+}
+
+.card:hover {
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    transition: all 0.5s;
 }
 
 .card img {
+    text-align: center;
     padding: 1rem;
+}
+
+.card-product-grid {
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .btn-outline-primary, .btn-outline-danger {
     border-color: transparent;
     transition: all 0.5s;
-}
-
-.btn-outline-primary:hover, .btn-outline-danger:hover {
-
 }
