@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-card',
@@ -9,12 +10,17 @@ import { Component, Input } from '@angular/core';
 })
 export class CardComponent {
 
+  constructor(private router: Router) { }
+
   @Input()
 
   producto?: any;
 
   editar(){
-    console.log(this.producto);
+    this.router.navigate(['editar', this.producto.id]);
   }
 
+  eliminar(){
+    console.log('this.producto.id');
+  }
 }
