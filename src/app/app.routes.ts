@@ -4,5 +4,5 @@ import { EditarComponent } from './vistas/editar/editar.component';
 
 export const routes: Routes = [
     { path: '', component: HomeComponent },
-    { path: 'editar', component: EditarComponent},
+    { path: 'editar/:id', component: EditarComponent},
 ];
