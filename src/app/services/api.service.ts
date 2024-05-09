@@ -13,4 +13,12 @@ export class ApiService {
   getAllProducts(){
     return this.http.get(URL);
   }
+
+  addProduct(form: any){
+    return this.http.post('https://platzi-ecommerce-api.herokuapp.com/products', form);
+  }
+
+  deleteProduct(id: number){
+    return this.http.delete(`URL+/${id}`)
+  }
 }

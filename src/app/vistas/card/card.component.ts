@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { Router } from '@angular/router';
+import { ApiService } from '../../services/api.service';
 
 @Component({
   selector: 'app-card',
@@ -10,7 +11,7 @@ import { Router } from '@angular/router';
 })
 export class CardComponent {
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, private api: ApiService) { }
 
   @Input()
 
@@ -20,7 +21,10 @@ export class CardComponent {
     this.router.navigate(['editar', this.producto.id]);
   }
 
-  eliminar(){
-    console.log('this.producto.id');
+  eliminar(id: number){
+    console.log(id);
+    this.api.deleteProduct(id).subscribe((res) => {
+      console.log(res);
+    });
   }
 }
