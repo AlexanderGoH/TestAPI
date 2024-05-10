@@ -13,8 +13,6 @@ import { ApiService } from '../../services/api.service';
 export class EditarComponent {
   constructor(private route: ActivatedRoute, private api: ApiService, private router: Router) { }
 
-  datosProducto = {id: "", title: "", price: "0", description: "", categoryId:"", images: []};
-
   editarForm = new FormGroup({
     id: new FormControl(''),
     title: new FormControl(''),
