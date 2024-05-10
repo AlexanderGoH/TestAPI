@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { ApiService } from '../../services/api.service';
 import { CardComponent } from '../card/card.component';
 
-import { RouterOutlet } from '@angular/router';
+import { Router, RouterOutlet } from '@angular/router';
 import { NgFor } from '@angular/common';
 
 @Component({
@@ -16,11 +16,15 @@ export class HomeComponent {
   title = 'prograweb';
   productos = [];
 
-  constructor(private api: ApiService){}
+  constructor(private api: ApiService, private router: Router){}
 
   ngOnInit(){
     this.api.getAllProducts().subscribe((products: any) => {
       this.productos = products;
     });
+  }
+
+  agregarProducto(){
+    this.router.navigate(['agregar']);
   }
 }
