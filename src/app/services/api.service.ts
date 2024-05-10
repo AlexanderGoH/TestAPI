@@ -13,4 +13,12 @@ export class ApiService {
   getAllProducts(){
     return this.http.get(URL);
   }
+
+  getSingleProduct(id:any){
+    return this.http.get(`${URL}/${id}`)
+  }
+
+  putProduct(form:any){
+    return this.http.put(`${URL}/${form.id}`, form);
+  }
 }
