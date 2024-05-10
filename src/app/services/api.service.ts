@@ -21,4 +21,8 @@ export class ApiService {
   putProduct(form:any){
     return this.http.put(`${URL}/${form.id}`, form);
   }
+
+  postProduct(form:any){
+    return this.http.post(URL, form);
+  }
 }
