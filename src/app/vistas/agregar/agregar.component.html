@@ -1,30 +1,27 @@
-<div class="container mt-3 mb-3">
-    <h2>Agregar producto</h2>
-    <form>
-        <div class="form-group">
-            <label for="example">Titulo</label>
-            <input type="text" class="form-control" placeholder="Titulo del producto" formControlName="title">
-        </div>     
-        <div class="form-group">
-            <label for="example">Descripción</label>
-            <input type="text" class="form-control" placeholder="Descripción" formControlName="description">
-        </div>
-        <div class="form-row">
-            <div class="form-group col-md-2">
-                <label for="example">Precio</label>
-                <input type="text" class="form-control" placeholder="Precio" formControlName="price">
-            </div>
-            <div class="form-group col-md-3">
-                <label for="example">Categoría</label>
-                <input type="number" class="form-control" placeholder="Categoría" formControlName="category">
-            </div>
-        </div>
-        <div class="form-row">
-            <label for="example">Imagen (URL)</label>
-            <input type="text" class="form-control" placeholder="URL de imagen" formControlName="image">
-        </div>
-        <br>
-        <button type="submit" class="btn btn-success">Agregar producto</button>
-        <button type="button" class="btn btn-dark" (click)="salir()">Salir</button>
-    </form>
+<div class="container">
+  <form [formGroup]="nuevoForm" (ngSubmit)="postForm(nuevoForm.value)">
+    <h1>Agregar Producto</h1>
+    <div class="form-group">
+      <label for="titulo">Título:</label>
+      <input type="text" class="form-control" formControlName="title" />
+    </div>
+    <div class="form-group">
+      <label for="precio">Precio:</label>
+      <input type="number" class="form-control" formControlName="price" />
+    </div>
+    <div class="form-group">
+      <label for="descripcion">Descripción:</label>
+      <textarea class="form-control" formControlName="description"></textarea>
+    </div>
+    <div class="form-group">
+      <label for="categoriaId">ID Categoría:</label>
+      <input type="number" class="form-control" formControlName="categoryId" />
+    </div>
+    <div class="form-group">
+      <label for="imagen">Imagen (URL):</label>
+      <input type="text" class="form-control" formControlName="images" />
+    </div>
+    <button type="submit" class="btn btn-secondary">Agregar</button>
+    <button type="button" class="btn btn-dark" (click)="salir()">Salir</button>
+  </form>
 </div>
