@@ -44,4 +44,8 @@ export class EditarComponent {
       this.router.navigate([''])
     });
   }
+
+  salir(){
+    this.router.navigate(['']);
+  }
 }
