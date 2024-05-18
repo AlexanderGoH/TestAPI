@@ -15,7 +15,7 @@ export class ApiService {
   }
 
   getSingleProduct(id:any){
-    return this.http.get(`${URL}/${id}`)
+    return this.http.get(`${URL}/${id}`);
   }
 
   putProduct(form:any){
@@ -24,5 +24,9 @@ export class ApiService {
 
   postProduct(form:any){
     return this.http.post(URL, form);
+  }
+
+  deleteProduct(id:any){
+    return this.http.delete(`${URL}/${id}`);
   }
 }
