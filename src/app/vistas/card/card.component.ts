@@ -20,4 +20,12 @@ export class CardComponent {
   editar(){
     this.router.navigate(['editar', this.producto.id]);
   }
+
+  eliminar(id:any){
+    this.api.deleteProduct(id).subscribe(data => {
+      console.log(data);
+      alert('Producto eliminado exitosamente');
+      location.reload();
+    });
+  }
 }
