@@ -18,6 +18,7 @@ export class EditarComponent {
     title: new FormControl(''),
     price: new FormControl(''),
     description: new FormControl(''),
+    images: new FormControl(''),
   });
 
   ngOnInit(){
@@ -29,6 +30,7 @@ export class EditarComponent {
           title: data.title,
           price: data.price,
           description: data.description,
+          images: data.images[0],
         });
         console.log(data);
       });
@@ -38,10 +40,17 @@ export class EditarComponent {
   }
 
   postForm(form:any){
-    this.api.putProduct(form).subscribe((data: any) => {
+    const producto = {
+      id: this.editarForm.value.id,
+      title: form.title,
+      price: form.price,
+      description: form.description,
+      images: [form.images],
+    };
+
+    this.api.putProduct(producto).subscribe((data: any) => {
       console.log(data);
-      alert("Producto editado exitosamente");
-      this.router.navigate([''])
+      this.salir();
     });
   }
 
