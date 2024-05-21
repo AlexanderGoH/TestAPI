@@ -32,7 +32,7 @@ export class AgregarComponent {
         images: [form.images]
       };
 
-      console.log(newProduct);
+      // console.log(newProduct);
       this.api.postProduct(newProduct).subscribe(
         (data: any) => {
           this.router.navigate(['']);
