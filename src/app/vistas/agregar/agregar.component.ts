@@ -18,7 +18,7 @@ export class AgregarComponent {
     title: new FormControl('', Validators.required),
     price: new FormControl('', Validators.required),
     description: new FormControl('', Validators.required),
-    categoryId: new FormControl('', Validators.required),
+    category: new FormControl('', Validators.required),
     image: new FormControl('', Validators.required),
   });
 
@@ -28,7 +28,7 @@ export class AgregarComponent {
         title: form.title,
         price: form.price,
         description: form.description,
-        categoryId: form.categoryId,
+        category: form.category,
         image: form.image
       };
 

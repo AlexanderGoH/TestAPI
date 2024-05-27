@@ -18,7 +18,7 @@ export class EditarComponent {
     title: new FormControl(''),
     price: new FormControl(''),
     description: new FormControl(''),
-    categoryId: new FormControl(''),
+    category: new FormControl(''),
     image: new FormControl(''),
   });
 
@@ -31,7 +31,7 @@ export class EditarComponent {
           title: data.results[0].title,
           price: data.results[0].price,
           description: data.results[0].description,
-          categoryId: data.results[0].categoryId,
+          category: data.results[0].category,
           image: data.results[0].image,
         });
         console.log(data.results[0]);
@@ -47,7 +47,7 @@ export class EditarComponent {
       title: form.title,
       price: form.price,
       description: form.description,
-      categoryId: form.categoryId,
+      category: form.category,
       image: form.image,
     };
 
