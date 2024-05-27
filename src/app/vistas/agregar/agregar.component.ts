@@ -19,7 +19,7 @@ export class AgregarComponent {
     price: new FormControl('', Validators.required),
     description: new FormControl('', Validators.required),
     categoryId: new FormControl('', Validators.required),
-    images: new FormControl('', Validators.required),
+    image: new FormControl('', Validators.required),
   });
 
   postForm(form: any){
@@ -29,7 +29,7 @@ export class AgregarComponent {
         price: form.price,
         description: form.description,
         categoryId: form.categoryId,
-        images: [form.images]
+        image: form.image
       };
 
       // console.log(newProduct);

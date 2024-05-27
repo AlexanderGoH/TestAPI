@@ -18,7 +18,8 @@ export class EditarComponent {
     title: new FormControl(''),
     price: new FormControl(''),
     description: new FormControl(''),
-    images: new FormControl(''),
+    categoryId: new FormControl(''),
+    image: new FormControl(''),
   });
 
   ngOnInit(){
@@ -26,13 +27,14 @@ export class EditarComponent {
     if(productoId !== null){
       this.api.getSingleProduct(productoId).subscribe((data: any) => {
         this.editarForm.setValue({
-          id: data.id,
-          title: data.title,
-          price: data.price,
-          description: data.description,
-          images: data.images[0],
+          id: data.results[0].id,
+          title: data.results[0].title,
+          price: data.results[0].price,
+          description: data.results[0].description,
+          categoryId: data.results[0].categoryId,
+          image: data.results[0].image,
         });
-        console.log(data);
+        console.log(data.results[0]);
       });
     } else {
       console.error("No se ha encontrado el id en la URL");
@@ -45,7 +47,8 @@ export class EditarComponent {
       title: form.title,
       price: form.price,
       description: form.description,
-      images: [form.images],
+      categoryId: form.categoryId,
+      image: form.image,
     };
 
     this.api.putProduct(producto).subscribe((data: any) => {
